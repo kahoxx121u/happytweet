@@ -34,7 +34,7 @@ Basic認証 ID：admin
 
 # 洗い出した要件
 
-*＜トップページ＞*
+** ＜トップページ＞ **
 
 【ボタン】
 サインイン/ログインページへ遷移できるボタンがある
@@ -52,7 +52,7 @@ Basic認証 ID：admin
 
 共有者のニックネームを見ることができる
 
-*＜ユーザー登録ページ＞*
+** ＜ユーザー登録ページ＞ **
 
 【ボタン】
 サインインできるボタンがある
@@ -68,7 +68,7 @@ Basic認証 ID：admin
 【表示】
 ログインページを見ることができる
 
-*＜詳細ページ＞*
+** ＜詳細ページ＞ **
 
 【ボタン】
 コメントできるボタンがある
@@ -79,21 +79,25 @@ Basic認証 ID：admin
 # 実装した機能について画像やGIFおよびその説明
 
 * 呟きの投稿の画像
+
 https://gyazo.com/b9cce26b3c3ca104acaa5589732e06b8
 
 * トップページの表示
+
 https://gyazo.com/ab90667113b28ccf71124e87a097b983
 
 * サインイン画像
+
 https://gyazo.com/886dad9e29af9c7bfde384bc2ff7d31a
 
 * ログイン画像
+
 https://gyazo.com/37e8c9ff4ef89c9f98f5aba2f2d85a22
 
 
 # データベース設計
 
-### users
+### usersテーブル
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
 | nickname            | string | null: false |
@@ -103,7 +107,7 @@ https://gyazo.com/37e8c9ff4ef89c9f98f5aba2f2d85a22
 - has_many :tweets
 - has_many :comments
 
-### tweets
+### tweetsテーブル
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
 | user   | references | null: false, foreign_key: true |
@@ -113,7 +117,7 @@ https://gyazo.com/37e8c9ff4ef89c9f98f5aba2f2d85a22
 - has_many :comments
 - has_one_attached :image
 
-### comments
+### commentsテーブル
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
 | user_id   | integer    | null: false |
