@@ -20,6 +20,10 @@ default: &default
 
 development:
   <<: *default
+  adapter: mysql2
+  username: root
+  password:
+  host: localhost
   database: happytweet_development
 
 # Warning: The database defined as "test" will be erased and
@@ -50,6 +54,7 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
   database: happytweet_production
   username: happytweet
   password: <%= ENV['HAPPYTWEET_DATABASE_PASSWORD'] %>
