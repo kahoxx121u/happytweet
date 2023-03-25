@@ -34,7 +34,7 @@ Basic認証 ID：admin
 
 # 洗い出した要件
 
-＜トップページ＞
+*＜トップページ＞*
 
 【ボタン】
 サインイン/ログインページへ遷移できるボタンがある
@@ -52,7 +52,7 @@ Basic認証 ID：admin
 
 共有者のニックネームを見ることができる
 
-＜ユーザー登録ページ＞
+*＜ユーザー登録ページ＞*
 
 【ボタン】
 サインインできるボタンがある
@@ -68,7 +68,7 @@ Basic認証 ID：admin
 【表示】
 ログインページを見ることができる
 
-＜詳細ページ＞
+*＜詳細ページ＞*
 
 【ボタン】
 コメントできるボタンがある
@@ -78,6 +78,32 @@ Basic認証 ID：admin
 
 
 # 実装した機能について画像やGIFおよびその説明
+
+#　データベース設計
+
+### users
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| nickname            | references | null: false, foreign_key: true |
+| email               | references | null: false, foreign_key: true |
+| encrypted_password  | references | null: false, foreign_key: true |
+
+### tweets
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| name   | string     | null: false  |
+| text   | string     | null: false  |
+| image  | text       | null: false  |
+
+### comments
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user_id   | integer    | null: false |
+| tweet_id  | integer    | null: false |
+| text      | text       | null: false |
+
+# 画面推移図
+
 
 # 開発環境
 ・フロントエンド
