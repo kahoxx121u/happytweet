@@ -5,6 +5,9 @@ application up and running.
 
 Things you may want to cover:
 
+#アプリケーション名
+HappyTweet
+
 * Ruby version
 
 * System dependencies
