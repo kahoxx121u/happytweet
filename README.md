@@ -1,27 +1,43 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-```アプリケーション名
+# アプリケーション名
 HappyTweet
 
-* Ruby version
+# アプリケーション概要
+毎日幸せに感じたことを呟き、世界中にハッピーをシェアすることができる
 
-* System dependencies
+# URL
 
-* Configuration
+# テスト用アカウント
 
-* Database creation
+# 利用方法
+・ちょっとしたハッピーなことを世界中に共有することができる
+・第三者が投稿した内容にコメントを残すことができ、ハッピーの連鎖に繋げることができる
 
-* Database initialization
+# アプリケーションを作成した背景
+毎日嫌なことや不満に思うことをつぶやくより、楽しいことや嬉しいことをつぶやく癖をつけると、
+気持ちが前向きになるということに気づいたので、前向きなことしか呟けないSNSを開発しようと思いました。
 
-* How to run the test suite
+# 洗い出した要件
 
-* Services (job queues, cache servers, search engines, etc.)
+# 実装した機能について画像やGIFおよびその説明
 
-* Deployment instructions
+# 実装予定の機能
 
-* ...
+# 開発環境
+・フロントエンド
+・バックエンド
+・インフラ
+・テキストエディタ
+・タスク管理
+
+# ローカルでの動作方法
+% cd xxxxx
+% bundle install
+% yarn install
+
+# 工夫したポイント
+
+
+
+
