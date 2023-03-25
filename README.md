@@ -84,16 +84,22 @@ Basic認証 ID：admin
 ### users
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
-| nickname            | references | null: false, foreign_key: true |
-| email               | references | null: false, foreign_key: true |
-| encrypted_password  | references | null: false, foreign_key: true |
+| nickname            | string | null: false |
+| email               | string | null: false |
+| encrypted_password  | string | null: false |
+
+- has_many :tweets
+- has_many :comments
 
 ### tweets
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
-| name   | string     | null: false  |
+| user   | references | null: false, foreign_key: true |
 | text   | string     | null: false  |
-| image  | text       | null: false  |
+
+- belongs_to :user
+- has_many :comments
+- has_one_attached :image
 
 ### comments
 | Column | Type       | Options                        |
@@ -101,6 +107,10 @@ Basic認証 ID：admin
 | user_id   | integer    | null: false |
 | tweet_id  | integer    | null: false |
 | text      | text       | null: false |
+
+- belongs_to :tweet 
+- belongs_to :user   
+
 
 # 画面推移図
 
